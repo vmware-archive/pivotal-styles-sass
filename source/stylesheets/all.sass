@@ -1,49 +1,13 @@
 @charset "utf-8"
 
-@import "susy"
-
-$total-columns  : 8
-$column-width   : 5em
-$gutter-width   : .125em
-$grid-padding   : $gutter-width
-
-$break          : 12
-
-@include border-box-sizing
-
-.container
-  @include container($total-columns, $break)
-  overflow: auto
-
-.quarter
-  @include span-columns(2,8)
-
-.half
-  @include span-columns(4,8)
-
-.omega
-  @include omega
-
-@import 'pivotal'
+@import layout
+@import pivotal
+@import headers
 
 body
   background-color: $pivotal_light_grey
   color: $pivotal_dark_grey
   padding-top: 80px
-
-.siteHead
-  background-color: white
-  overflow: auto
-  position: fixed
-  left: 0
-  right: 0
-  top: 0
-  width: 100%
-  z-index: 1000
-
-.siteHead__inner
-  padding-top: 1em
-  padding-bottom: 1em
 
 .logo
   display: block

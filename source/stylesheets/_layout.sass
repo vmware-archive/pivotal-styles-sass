@@ -1,0 +1,23 @@
+@import "susy"
+
+$total-columns  : 8
+$column-width   : 5em
+$gutter-width   : .125em
+$grid-padding   : $gutter-width
+
+$break          : 12
+
+@include border-box-sizing
+
+.container
+  @include container($total-columns, $break)
+  overflow: auto
+
+.quarter
+  @include span-columns(2,8)
+
+.half
+  @include span-columns(4,8)
+
+.omega
+  @include omega
