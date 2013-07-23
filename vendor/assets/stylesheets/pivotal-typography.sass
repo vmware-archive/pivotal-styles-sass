@@ -1,0 +1,49 @@
+@import pivotal-brand
+
+@mixin pivotal_typography
+  font-family: $pivotal_font_family
+
+@mixin pivotal_text
+  @include pivotal_typography
+  font-size: 14px
+  font-weight: normal
+  font-style: normal
+  line-height: 24px
+  color: $pivotal_dark_grey
+
+@mixin pivotal_heading
+  @include pivotal_typography
+  color: $pivotal_dark_grey
+  text-transform: uppercase
+  letter-spacing: 1px
+
+@mixin pivotal_h1
+  @include pivotal_heading
+  font-size: 51px
+  line-height: 52px
+  font-weight: 900
+  letter-spacing: 1px
+
+@mixin pivotal_h2
+  @include pivotal_heading
+  font-size: 34px
+  line-height: 41px
+  font-weight: 900
+
+@mixin pivotal_h3
+  @include pivotal_heading
+  font-size: 19px
+  line-height: 27px
+
+@mixin pivotal_anchor
+  color: $pivotal_blue
+
+@mixin pivotal_headers
+  h1
+    @include pivotal_h1
+  h2
+    @include pivotal_h2
+  h3
+    @include pivotal_h3
+  h4, h5, h6
+    @include pivotal_heading
