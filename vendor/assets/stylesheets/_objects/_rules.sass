@@ -1,0 +1,10 @@
+@mixin pivotal_rule
+  display: block
+  background-color: $pivotal_dark_grey
+  height: 1px
+  margin: $base-spacing-unit 0
+
+@mixin pivotal_rule_dotted
+  @include pivotal_rule
+  background-color: transparent
+  border-top: 1px dotted $pivotal_dark_grey
