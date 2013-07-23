@@ -1,7 +1,18 @@
-@import pivotal-brand
+@mixin pivotal_tile
+  background-color: white
+  padding: $base-spacing-unit
 
-@mixin pivotal_container_outter
-  background-color: $pivotal_light_grey
+@mixin pivotal_tile_blue
+  @include pivotal_tile
+  background-color: $pivotal_blue
+  color: white
 
-@mixin pivotal_container_inner
-  background-color: $pivotal_white
+@mixin pivotal_tile_yellow
+  @include pivotal_tile
+  background-color: $pivotal_yellow
+  color: white
+
+@mixin pivotal_tile_red
+  @include pivotal_tile
+  background-color: $pivotal_red
+  color: white

@@ -1,5 +1,3 @@
-@import pivotal-brand
-
 @mixin pivotal_typography
   font-family: $pivotal_font_family
 
@@ -9,11 +7,9 @@
   font-weight: normal
   font-style: normal
   line-height: 24px
-  color: $pivotal_dark_grey
 
 @mixin pivotal_heading
   @include pivotal_typography
-  color: $pivotal_dark_grey
   text-transform: uppercase
   letter-spacing: 1px
 
@@ -37,6 +33,13 @@
 
 @mixin pivotal_anchor
   color: $pivotal_blue
+  text-decoration: none
+  &:visited
+    color: $pivotal_blue
+  &:hover
+    color: darken($pivotal_blue,10%)
+  &:active
+    color: darken($pivotal_blue,15%)
 
 @mixin pivotal_headers
   h1
@@ -47,3 +50,14 @@
     @include pivotal_h3
   h4, h5, h6
     @include pivotal_heading
+
+@mixin pivotal_sub_header
+  @include pivotal_heading
+  color: $pivotal_dark_grey
+  font-weight: 900
+  font-size: 15px
+  line-height: 18px
+  display: inline-block
+  border-top: 1px dotted $pivotal_dark_grey
+  padding: 7px 0 9px 0
+  margin: 43px 0 9px
