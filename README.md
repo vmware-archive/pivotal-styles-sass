@@ -1,6 +1,6 @@
 # Pivotal::Sass
 
-TODO: Write a gem description
+A set of mixins for use across Pivotal Labs internal projects released in a Gem for a Rails 3.2+ project.
 
 ## Installation
 
@@ -18,7 +18,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Rails 3.2+
+
+`application.css`
+
+    @import pivotal
+
+    button {
+      @include pivotal_primary_button
+    }
+
+### Examples
+
+There is an example app in this repo used to help build out the mixins. Follow these steps to get it running or just take a look in the `source` directory.
+
+	$ bundle
+	$ bundle exec middleman server
+	
+Then visit `localhost:4567` to see an example of usage.
 
 ## Contributing
 
