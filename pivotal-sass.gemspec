@@ -6,11 +6,11 @@ require 'pivotal/sass/version'
 Gem::Specification.new do |spec|
   spec.name          = "pivotal-sass"
   spec.version       = Pivotal::Sass::VERSION
-  spec.authors       = ["Robbie Clutton"]
+  spec.authors       = ["Robbie Clutton", "Spencer Hurst"]
   spec.email         = ["robbie@pivotallabs.com"]
   spec.description   = %q{Pivotal branding as SASS}
   spec.summary       = %q{Pivotal branding as SASS}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/pivotal/pivotal-styles-sass"
   spec.license       = "MIT"
 
   spec.files         = Dir["{lib,vendor}/**/*"] + ["LICENSE.txt", "README.md"]
