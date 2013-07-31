@@ -17,5 +17,24 @@
     color: white
     text-decoration: none
 
+@mixin pivotal_button
+  background-color: lighten($pivotal_dark_grey, 25%)
+  color: white
+  border: none
+  font-family: $pivotal_font_family
+  font-size: 12px
+  padding: .5em .75em
+  text-align: center
+  text-decoration: none
+  &:hover
+    background-color: lighten($pivotal_dark_grey, 10%)
+    color: white
+    text-decoration: none
+
+  &:active
+    background-color: $pivotal_dark_grey
+    color: white
+    text-decoration: none
+
 
 
