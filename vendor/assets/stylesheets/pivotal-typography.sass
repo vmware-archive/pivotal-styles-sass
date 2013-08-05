@@ -1,3 +1,6 @@
+@mixin font-smoothing
+  -webkit-font-smoothing: antialiased
+
 @mixin pivotal_typography
   font-family: $pivotal_font_family
 
@@ -58,6 +61,6 @@
   font-size: 15px
   line-height: 18px
   display: inline-block
-  border-top: 1px dotted $pivotal_dark_grey
+  border-top: 1px solid #d0d0d0
   padding: 7px 0 9px 0
-  margin: 43px 0 9px
+  margin: $half_spacing_unit 0 $half_spacing_unit

@@ -12,6 +12,7 @@ $break          : 12
 .container
   @include container($total-columns, $break)
   overflow: auto
+  +single-transition(all, 100ms, linear)
 
 .quarter
   @include span-columns(2,8)
