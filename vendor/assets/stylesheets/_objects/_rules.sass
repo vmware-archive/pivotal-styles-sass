@@ -1,10 +1,28 @@
 @mixin pivotal_rule
-  display: block
-  background-color: $pivotal_dark_grey
-  height: 1px
-  margin: $base-spacing-unit 0
+    display: block
+    background-color: $pivotal_dark_grey
+    height: 1px
+    margin: $base-spacing-unit 0
 
 @mixin pivotal_rule_dotted
-  @include pivotal_rule
-  background-color: transparent
-  border-top: 1px dotted $pivotal_dark_grey
+    @include pivotal_rule
+    background-color: transparent
+    border-top: 1px solid #d0d0d0
+
+@mixin pivotal_rule_ellipsis
+    font-weight: 700
+    font-size: 2em
+    line-height: 1
+    text-align: center
+    margin: 1em 0 2em
+    border: 0
+    padding: 0
+    height: 0
+    clear: both
+    display: block
+    &:after
+        content: "···"
+        color: $pivotal_light_grey
+        letter-spacing: 1em
+        padding-left: 1em
+        height: 0

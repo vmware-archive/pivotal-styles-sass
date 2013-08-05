@@ -1,0 +1,617 @@
+---
+title: Base Styles
+---
+
+%section
+  .container.tile
+    %header.pageHeader
+      %h1 Base Style Guide
+      %h2 Basic markup and typographic styles
+    %h2
+      Second Level Header
+      %a{:href => "#"} Linked
+    %p
+      The main page header of this guide is an
+      %code h1
+      element. Any header elements may include links, as depicted in the example.
+    %p
+      The secondary header above is an
+      %code h2
+      element, which may be used for any form of important page-level header. More than one may be used per page. Consider using an
+      %code h2
+      unless you need a header level of less importance, or as a sub-header to an existing
+      %code h2
+      element.
+    %h3
+      Third-Level Header
+      %a{:href => "#"} Linked
+    %p
+      The header above is an
+      %code h3
+      element, which may be used for any form of page-level header which falls below the
+      %code h2
+      header in a document hierarchy.
+    %h4
+      Fourth-Level Header
+      %a{:href => "#"} Linked
+    %p
+      The header above is an
+      %code h4
+      element, which may be used for any form of page-level header which falls below the
+      %code h3
+      header in a document hierarchy.
+    %h5
+      Fifth-Level Header
+      %a{:href => "#"} Linked
+    %p
+      The header above is an
+      %code h5
+      element, which may be used for any form of page-level header which falls below the
+      %code h4
+      header in a document hierarchy.
+    %h6
+      Sixth-Level Header
+      %a{:href => "#"} Linked
+    %p
+      The header above is an
+      %code h6
+      element, which may be used for any form of page-level header which falls below the
+      %code h5
+      header in a document hierarchy.
+    %h2#grouping Grouping content
+    %h3 Paragraphs
+    %p
+      All paragraphs are wrapped in
+      %code p
+      tags. Additionally,
+      %code p
+      elements can be wrapped with a
+      %code blockquote
+      element
+      = succeed "." do
+        %em
+          if the
+          %code p
+          element is indeed a quote
+      Historically,
+      %code blockquote
+      has been used purely to force indents, but this is now achieved using CSS. Reserve
+      %code blockquote
+      for quotes.
+    %h3 Horizontal rule
+    %p
+      The
+      %code hr
+      element represents a paragraph-level thematic break, e.g. a scene change in a story, or a transition to another topic within a section of a reference book. The following extract from
+      %cite Pandora’s Star
+      by Peter F. Hamilton shows two paragraphs that precede a scene change and the paragraph that follows it:
+    .example
+      %p 
+        Dudley was ninety-two, in his second life, and fast approaching time for another rejuvenation. Despite his body having the physical age of a standard fifty-year-old, the prospect of a long degrading campaign within academia was one he regarded with dread. For a supposedly advanced civilization, the Intersolar Commonwearth could be appallingly backward at times, not to mention cruel.
+      %p
+        %i 
+          Maybe it won’t be that bad, he told himself. The lie was comforting enough to get him through the rest of the night’s shift.
+      %hr.ellipsis
+        %p The Carlton AllLander drove Dudley home just after dawn. Like the astronomer, the vehicle was old and worn, but perfectly capable of doing its job. It had a cheap diesel engine, common enough on a semi-frontier world like Gralmond, although its drive array was a thoroughly modern photoneural processor. With its high suspension and deep-tread tyres it could plough along the dirt track to the observatory in all weather and seasons, including the metre-deep snow of Gralmond’s winters.      
+      %h3 Pre-formatted text
+      %p
+        The
+        %code pre
+        element represents a block of pre-formatted text, in which structure is represented by typographic conventions rather than by elements. Such examples are an e-mail (with paragraphs indicated by blank lines, lists indicated by lines prefixed with a bullet), fragments of computer code (with structure indicated according to the conventions of that language) or displaying
+        %abbr{:title => "American Standard Code for Information Interchange"} ASCII
+        art. Here’s an example showing the printable characters of
+        = succeed ":" do
+          %abbr ASCII
+      .example
+        %pre
+          %samp
+            \! " # $ % & ' ( ) * + , - . /
+            0 1 2 3 4 5 6 7 8 9 : ; < = > ?
+            @ A B C D E F G H I J K L M N O
+            P Q R S T U V W X Y Z [ \ ] ^ _
+            ` a b c d e f g h i j k l m n o
+            p q r s t u v w x y z { | } ~
+    %h3 Blockquotes
+    %p
+      The
+      %code blockquote
+      element represents a section that is being quoted from another source.
+    .example
+      %blockquote{:cite => "http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206"}
+        %p Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
+
+    %h3 Ordered list
+    %p
+      The
+      %code ol
+      element denotes an ordered list, and various numbering schemes are available through the CSS (including 1,2,3… a,b,c… i,ii,iii… and so on). Each item requires a surrounding
+      %code li
+      tag, to denote individual items within the list (as you may have guessed,
+      %code li
+      stands for list item).
+    .example
+      %ol
+        %li This is an ordered list.
+        %li
+          This is the second item, which contains a sub list
+          %ol
+            %li This is the sub list, which is also ordered.
+            %li It has two items.
+        %li This is the final item on this list.
+    %h3 Unordered list
+    %p
+      The
+      %code ul
+      element denotes an unordered list (ie. a list of loose items that don’t require numbering, or a bulleted list). Again, each item requires a surrounding
+      %code li
+      tag, to denote individual items. Here is an example list showing the constituent parts of the British Isles:
+    .example
+      %ul
+        %li
+          United Kingdom of Great Britain and Northern Ireland:
+          %ul
+            %li England
+            %li Scotland
+            %li Wales
+            %li Northern Ireland
+        %li Republic of Ireland
+        %li Isle of Man
+        %li
+          Channel Islands:
+          %ul
+            %li Bailiwick of Guernsey
+            %li Bailiwick of Jersey
+        %p Sometimes we may want each list item to contain block elements, typically a paragraph or two.
+        .example
+          %ul
+            %li
+              %p The British Isles is an archipelago consisting of the two large islands of Great Britain and Ireland, and many smaller surrounding islands.
+            %li
+              %p Great Britain is the largest island of the archipelago. Ireland is the second largest island of the archipelago and lies directly to the west of Great Britain.
+            %li
+              %p
+                The full list of islands in the British Isles includes over 1,000 islands, of which 51 have an area larger than 20 km
+                %sup> 2
+                \.
+    %h3 Definition list
+    %p
+      The
+      %code dl
+      element is for another type of list called a definition list. Instead of list items, the content of a
+      %code dl
+      consists of
+      %code dt
+      (Definition Term) and
+      %code dd
+      (Definition description) pairs. Though it may be called a “definition list”,
+      %code dl
+      can apply to other scenarios where a parent/child relationship is applicable. For example, it may be used for marking up dialogues, with each
+      %code dt
+      naming a speaker, and each
+      %code dd
+      containing his or her words.
+    .example
+      %dl
+        %dt This is a term.
+        %dd
+          This is the definition of that term, which both live in a
+          = succeed "." do
+            %code dl
+        %dt Here is another term.
+        %dd And it gets a definition too, which is this line.
+        %dt Here is term that shares a definition with the term below.
+        %dt Here is a defined term.
+        %dd
+          %code dt
+          terms may stand on their own without an accompanying
+          = succeed "," do
+            %code dd
+          but in that case they
+          %em share
+          descriptions with the next available
+          = succeed "." do
+            %code dt
+          You may not have a
+          %code dd
+          without a parent
+          = succeed "." do
+            %code dt
+    %h3 Figures
+    %p Figures are usually used to refer to images:
+    .example
+      %figure
+        %img{:alt => "Example image", :src => "http://placekitten.com/680/400"}/
+        %figcaption
+          This is a placeholder image, with supporting caption.
+    %p Here, a part of a poem is marked up using figure:
+    .example
+      %figure
+        %p
+          ‘Twas brillig, and the slithy toves
+          %br/
+          Did gyre and gimble in the wabe;
+          %br/
+          All mimsy were the borogoves,
+          %br/
+          And the mome raths outgrabe.
+        %figcaption
+          %cite Jabberwocky
+          (first verse). Lewis Carroll, 1832-98
+    %p When you  wish to cite the source of a quote, you should do so using a figure also:
+    .example
+      %blockquote{:cite => "http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206"}
+        %p Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
+      %figcaption.source
+        Winston Churchill, in
+        = succeed "." do
+          %cite
+            %a{:href => "http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206"} a speech to the House of Commons
+        11th November 1947
+    %p 
+      Included in Pivot Strap is an extra class
+      %code .cite
+      which styles the cited quote with a "–"
+
+    %h2#text Text-level Semantics
+    %p
+      There are a number of inline
+      %abbr{:title => "HyperText Markup Language"} HTML
+      elements you may use anywhere within other elements.
+    %h3 Links and anchors
+    %p
+      The
+      %code a
+      element is used to hyperlink text, be that to another page, a named fragment on the current page or any other location on the web. Example:
+    .example
+      %p
+        %a{:href => "/"} Go to the home page
+        or
+        = succeed "." do
+          %a{:href => "#banner"} return to the top of this page
+    %h3 Stressed emphasis
+    %p
+      The
+      %code em
+      element is used to denote text with stressed emphasis, i.e., something you’d pronounce differently. Where italicizing is required for stylistic differentiation, the
+      %code i
+      element may be preferable. Example:
+    .example
+      %p
+        You simply
+        %em must
+        try the negitoro maki!
+    %h3 Strong importance
+    %p
+      The
+      %code strong
+      element is used to denote text with strong importance. Where bolding is used for stylistic differentiation, the
+      %code b
+      element may be preferable. Example:
+    .example
+      %p
+        %strong Don’t
+        stick nails in the electrical outlet.
+    %h3 Small print
+    %p
+      The
+      %small small
+      element is used to represent disclaimers, caveats, legal restrictions, or copyrights (commonly referred to as ‘small print’). It can also be used for attributions or satisfying licensing requirements. Example:
+    .example
+      %p
+        %small Copyright © 1922-2011 Pivotal Labs LLC. All Rights Reserved.
+    %h3 Strikethrough
+    %p
+      The
+      %code s
+      element is used to represent content that is no longer accurate or relevant. When indicating document edits i.e., marking a span of text as having been removed from a document, use the
+      %code del
+      element instead. Example:
+    .example
+      %p
+        %s Recommended retail price: £3.99 per bottle
+        %br/
+        %strong Now selling for just £2.99 a bottle!
+    %h3 Citations
+    %p
+      The
+      %code cite
+      element is used to represent the title of a work (e.g. a book, essay, poem, song, film, TV show, sculpture, painting, musical, exhibition, etc). This can be a work that is being quoted or referenced in detail (i.e. a citation), or it can just be a work that is mentioned in passing. Example:
+    .example
+      %p
+        %cite> Universal Declaration of Human Rights
+        , United Nations, December 1948. Adopted by General Assembly resolution 217 A (III).
+    %h3 Inline quotes
+    %p
+      The
+      %code q
+      element is used for quoting text inline. Example showing nested quotations:
+    .example
+      %p
+        John said,
+        %q<
+          I saw Lucy at lunch, she told me
+          = succeed "." do
+            %q Mary wants you to get some ice cream on your way home
+          I think I will get some at Ben and Jerry’s, on Gloucester Road.
+    %h3 Definition
+    %p
+      The
+      %code dfn
+      element is used to highlight the first use of a term. The
+      %code title
+      attribute can be used to describe the term. Example:
+    .example
+      %p
+        Bob’s
+        %dfn{:title => "Dog"} canine
+        mother and
+        %dfn{:title => "Horse"} equine
+        father sat him down and carefully explained that he was an
+        %dfn{:title => "A mutation that combines two or more sets of chromosomes from different species"} allopolyploid
+        organism.
+    %h3 Abbreviation
+    %p
+      The
+      %code abbr
+      element is used for any abbreviated text, whether it be acronym, initialism, or otherwise. Generally, it’s less work and useful (enough) to mark up only the first occurrence of any particular abbreviation on a page, and ignore the rest. Any text in the
+      %code title
+      attribute will appear when the user’s mouse hovers the abbreviation (although notably, this does not work in Internet Explorer for Windows). Example abbreviations:
+    .example
+      %p
+        %abbr{:title => "British Broadcasting Corportation"}> BBC
+        ,
+        = succeed "," do
+          %abbr{:title => "HyperText Markup Language"} HTML
+        and
+        %abbr{:title => "Staffordshire"} Staffs.
+    %h3 Time
+    %p
+      The
+      %code time
+      element is used to represent either a time on a 24 hour clock, or a precise date in the proleptic Gregorian calendar, optionally with a time and a time-zone offset. Example:
+    .example
+      %p
+        Queen Elizabeth II was proclaimed sovereign of each of the Commonwealth realms on
+        %time{:datetime => "1952-02-6"} 6
+        and
+        = succeed "," do
+          %time{:datetime => "1952-02-7"} 7 February 1952
+        after the death of her father, King George VI.
+    %h3 Code
+    %p
+      The
+      %code code
+      element is used to represent fragments of computer code. Useful for technology-oriented sites, not so useful otherwise. Example:
+    .example
+      %p
+        When you call the
+        %code activate()
+        method on the
+        %code robotSnowman
+        object, the eyes glow.
+    %p
+      Used in conjunction with the
+      %code pre
+      element:
+    .example
+      %pre
+        %code
+          :preserve
+            function getJelly() {
+                echo $aDeliciousSnack;
+            }
+    %h3 Variable
+    %p
+      The
+      %code var
+      element is used to denote a variable in a mathematical expression or programming context, but can also be used to indicate a placeholder where the contents should be replaced with your own value. Example:
+    .example
+      %p
+        If there are
+        %var n
+        pipes leading to the ice cream factory then I expect at
+        %em least
+        %var n
+        flavours of ice cream to be available for purchase!
+    %h3 Sample output
+    %p
+      The
+      %code samp
+      element is used to represent (sample) output from a program or computing system. Useful for technology-oriented sites, not so useful otherwise. Example:
+    .example
+      %p
+        The computer said
+        %samp Too much cheese in tray two
+        but I didn’t know what that meant.
+    %h3 Keyboard entry
+    %p
+      The
+      %code kbd
+      element is used to denote user input (typically via a keyboard, although it may also be used to represent other input methods, such as voice commands). Example:
+      %p
+        .example
+          %p
+            To take a screenshot on your Mac, press
+            %kbd ⌘ Cmd
+            +
+            %kbd ⇧ Shift
+            +
+            = succeed "." do
+              %kbd 3
+        %h3 Superscript and subscript text
+        %p
+          The
+          %code sup
+          element represents a superscript and the sub element represents a
+          = succeed "." do
+            %code sub
+          These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation. As a guide, only use these elements if their absence would change the meaning of the content. Example:
+        .example
+          %p
+            The coordinate of the
+            = succeed "th" do
+              %var i
+            point is (
+            %var>
+              x
+              %sub
+                %var i
+            ,
+            = succeed ")." do
+              %var
+                y
+                %sub
+                  %var i
+            For example, the 10th point has coordinate (
+            %var>
+              x
+              %sub 10
+            ,
+            = succeed ")." do
+              %var
+                y
+                %sub 10
+          %p
+            f(
+            %var> x
+            ,
+            = succeed ")" do
+              %var n
+            \= log
+            %sub 4
+            %var x
+            %sup
+              %var n
+        %h3 Italicised
+        %p
+          The
+          %code i
+          element is used for text in an alternate voice or mood, or otherwise offset from the normal prose. Examples include taxonomic designations, technical terms, idiomatic phrases from another language, the name of a ship or other spans of text whose typographic presentation is typically italicised. Example:
+        .example
+          %p
+            There is a certain
+            %i{:lang => "fr"} je ne sais quoi
+            in the air.
+        %h3 Emboldened
+        %p
+          The
+          %code b
+          element is used for text stylistically offset from normal prose without conveying extra importance, such as key words in a document abstract, product names in a review, or other spans of text whose typographic presentation is typically emboldened. Example:
+        .example
+          %p
+            You enter a small room. Your
+            %b sword
+            glows brighter. A
+            %b rat
+            scurries past the corner wall.
+        %h3 Marked or highlighted text
+        %p
+          The
+          %code mark
+          element is used to represent a run of text marked or highlighted for reference purposes. When used in a quotation it indicates a highlight not originally present but added to bring the reader’s attention to that part of the text. When used in the main prose of a document, it indicates a part of the document that has been highlighted due to its relevance to the user’s current activity. Example:
+        .example
+          %p
+            I also have some
+            = succeed "s" do
+              %mark kitten
+            who are visiting me these days. They’re really cute. I think they like my garden! Maybe I should adopt a
+            = succeed "." do
+              %mark kitten
+        %h3#edits Edits
+        %p
+          The
+          %code del
+          element is used to represent deleted or retracted text which still must remain on the page for some reason. Meanwhile its counterpart, the
+          %code ins
+          element, is used to represent inserted text. Both
+          %code del
+          and
+          %code ins
+          have a
+          %code datetime
+          attribute which allows you to include a timestamp directly in the element. Example inserted text and usage:
+        .example
+          %p
+            She bought
+            %del{:datetime => "2005-05-30T13:00:00"} two
+            %ins{:datetime => "2005-05-30T13:00:00"} five
+            pairs of shoes.
+    %h2#tables Tabular data
+    %p
+      Tables should be used when displaying tabular data. The
+      = succeed "," do
+        %code thead
+      %code tfoot
+      and
+      %code tbody
+      elements enable you to group rows within each a table.
+    %p
+      If you use these elements, you must use every element. They should appear in this order:
+      = succeed "," do
+        %code thead
+      %code tfoot
+      and
+      = succeed "," do
+        %code tbody
+      so that browsers can render the foot before receiving all the data. You must use these tags within the table element.
+    .example
+      %table
+        %caption The Very Best Eggnog
+        %colgroup
+          %col{:style => "width:50%"}/
+          %col{:style => "width:25%"}/
+          %col{:style => "width:25%"}/
+        %thead
+          %tr
+            %th{:scope => "col"} Ingredients
+            %th{:scope => "col"} Serves 12
+            %th{:scope => "col"} Serves 24
+        %tbody
+          %tr
+            %td Milk
+            %td 1 quart
+            %td 2 quart
+          %tr
+            %td Cinnamon Sticks
+            %td 2
+            %td 1
+          %tr
+            %td Vanilla Bean, Split
+            %td 1
+            %td 2
+          %tr
+            %td Cloves
+            %td 5
+            %td 10
+          %tr
+            %td Mace
+            %td 10 blades
+            %td 20 blades
+          %tr
+            %td Egg Yolks
+            %td 12
+            %td 24
+          %tr
+            %td Cups Sugar
+            %td 1 ½ cups
+            %td 3 cups
+          %tr
+            %td Dark Rum
+            %td 1 ½ cups
+            %td 3 cups
+          %tr
+            %td Brandy
+            %td 1 ½ cups
+            %td 3 cups
+          %tr
+            %td Vanilla
+            %td 1 tbsp
+            %td 2 tbsp
+          %tr
+            %td Half-and-half or Light Cream
+            %td 1 quart
+            %td 2 quart
+          %tr
+            %td Freshly grated nutmeg to taste
+            %td
+            %td            

@@ -1,20 +1,45 @@
 @charset "utf-8"
 
-@import layout
-@import pivotal
-@import headers
+@import "pivotal"
+
+
+//
+// Base styles unclassed HTML elements
+//
+@import "pivot/_base/main"
+@import "pivot/_base/code"
+@import "pivot/_base/rules"
+
+//
+// Components and Abstractions (Some CSS "Patterns", if you will)
+//
+@import "pivot/_components/headers"
+@import "pivot/_components/sections"
+@import "pivot/_components/nav"
+
+//
+// Site UI Overrides and what not?
+//
+@import "ui/layout"
+@import "ui/typography"
+@import "ui/site-nav"
 
 body
-  background-color: $pivotal_light_grey
+  background-color: #EDEDED
   color: $pivotal_dark_grey
   padding-top: 80px
-
-.logo
-  display: block
-  text-indent: -9999em
-  height: 48px
-  width: 132px
-  background: no-repeat 0 0 image-url("logo_main.png")
+  +pivotal_text
+  +pivotal_quotes
+  +pivotal_inline_quotes
+  +pivotal_source
+  +pivotal_lists
+  +pivotal_captions
+  +pivotal_keyboard
+  +pivotal_highlight
+  +pivotal_tables
+  img
+    max-width: 100%
+    height: auto
 
 .hero
   background: image-url("pivotallabs.png") no-repeat fixed center
@@ -31,6 +56,9 @@ a
 
 .awesomeButton
   @include pivotal_button_primary
+
+.awesomeButtonLarge
+  @include pivotal_button_primary--large
 
 .tile
   @include pivotal_tile
@@ -50,3 +78,11 @@ a
 
 .rule
   @include pivotal_rule_dotted
+
+.tile--bordered
+  +pivotal_tile--bordered
+
+.lightGrey
+  background-color: #F9F9F9
+  border-top: 1px solid #dddddd
+  border-bottom: 1px solid #dddddd

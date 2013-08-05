@@ -2,6 +2,11 @@
   background-color: white
   padding: $base-spacing-unit
 
+@mixin pivotal_tile--bordered
+  +pivotal_tile
+  border: 1px solid #d0d0d0
+  border-bottom-width: 2px
+
 @mixin pivotal_tile_blue
   @include pivotal_tile
   background-color: $pivotal_blue
