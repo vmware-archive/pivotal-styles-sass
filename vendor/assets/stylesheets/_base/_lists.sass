@@ -1,0 +1,19 @@
+@mixin pivotal_unordered_lists
+	li
+		> ul, ol
+			margin-bottom: 0
+	ul
+		list-style-type: square
+		li
+			li
+				list-style-type: circle
+
+@mixin pivotal_definition_lists
+	dt
+		font-weight: 600
+	dd
+		margin-left: $base-spacing-unit * 1.5
+
+@mixin pivotal_lists
+	+pivotal_unordered_lists
+	+pivotal_definition_lists

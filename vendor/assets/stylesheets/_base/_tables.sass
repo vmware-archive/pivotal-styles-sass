@@ -1,0 +1,32 @@
+@mixin pivotal_tables
+    table
+        width: 100%
+    th, td
+        padding: $base-spacing-unit
+        text-align: left
+    caption
+        caption-side: bottom
+        color: $pivotal_grey
+        font-size: 12px
+        text-align: left
+        margin: $base-spacing-unit 0
+    th, td
+        border: 1px solid #ccc
+        &:empty
+            border:none
+    thead tr:last-child th
+        border-bottom-width: 2px
+
+    tbody tr th:last-of-type
+        border-right-width: 2px
+                
+[colspan]
+    text-align: center
+[colspan="1"]
+    text-align: left
+[rowspan]
+    vertical-align: middle
+[rowspan="1"]
+    vertical-align: top
+.numerical
+    text-align: right

@@ -1,0 +1,46 @@
+@mixin pivotal_inline_quotes
+	q
+		quotes: "“" "”" "‘" "’"
+	q
+		&:before
+			content: open-quote
+		&:after
+			content: close-quote
+
+@mixin pivotal_blockquotes
+	blockquote 
+		quotes: "“" "”"
+	blockquote 
+		p:before 
+			content: "“"
+			content: open-quote
+	blockquote 
+		p:after 
+			content: "" 
+			content: no-close-quote
+	blockquote 
+		p:last-of-type
+			&:after 
+				content: "”"
+			content: close-quote
+
+	blockquote
+		text-indent: -0.4em
+		color: $pivotal_grey
+		border-left: 4px solid $pivotal_light_grey
+		margin: 0
+		padding: 0 0 0 1em 
+		p:last-of-type
+			margin-bottom: 0
+
+@mixin pivotal_source
+	.source
+		display: block
+		text-indent: 0
+		&:before
+			content: "–"
+
+@mixin pivotal_quotes
+	+pivotal_inline_quotes
+	+pivotal_blockquotes
+	+pivotal_source
