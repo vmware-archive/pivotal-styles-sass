@@ -1,42 +1,42 @@
 q
-	quotes:"‘" "’" "“" "”"
+  quotes:"‘" "’" "“" "”"
 
 q
-	&:before
-		content: "‘"
-		content: open-quote
-	&:after
-		content: "’"
-		content: close-quote
+  &:before
+    content: "‘"
+    content: open-quote
+  &:after
+    content: "’"
+    content: close-quote
 q q
-	&:before
-		content: "“"
-		content: open-quote
-	&:after
-		content: "”"
-		content: close-quote
-
-blockquote 
-	quotes: "“" "”"
-blockquote 
-	p:before 
-		content: "“"
-		content: open-quote
-blockquote 
-	p:after 
-		content: "" 
-		content: no-close-quote
-blockquote 
-	p:last-of-type:after content: "”"
-	content: close-quote
+  &:before
+    content: "“"
+    content: open-quote
+  &:after
+    content: "”"
+    content: close-quote
 
 blockquote
-	text-indent: -0.4em
-	p:last-of-type
-		margin-bottom: 0
+  quotes: "“" "”"
+blockquote
+  p:before
+    content: "“"
+    content: open-quote
+blockquote
+  p:after
+    content: ""
+    content: no-close-quote
+blockquote
+  p:last-of-type:after content: "”"
+  content: close-quote
+
+blockquote
+  text-indent: -0.4em
+  p:last-of-type
+    margin-bottom: 0
 
 .source
-	display: block
-	text-indent: 0
-	&:before
-		content: "–"
+  display: block
+  text-indent: 0
+  &:before
+    content: "–"
