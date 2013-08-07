@@ -49,41 +49,49 @@ body
   color: white
 
 a
-  @include pivotal_anchor
+  +pivotal_anchor
 
 .hero
-  @include pivotal_headers
+  +pivotal_headers
 
 .awesomeButton
-  @include pivotal_button_primary
+  +pivotal_button
 .dangerButton
-  @include pivotal_button_danger
+  +pivotal_button_danger
+.dangerButtonLarge
+  +pivotal_button_danger
+  +pivotal_button--large
 .button
-  @include pivotal_button
-.awesomeButtonLarge
-  @include pivotal_button_primary--large
+  +pivotal_button
+.buttonLarge
+  +pivotal_button
+  +pivotal_button--large
+.buttonPrimary
+  +pivotal_button_primary
+.buttonPrimaryLarge
+  +pivotal_button_primary--large
 
 .awesomeButtonLarge
-  @include pivotal_button_primary--large
+  +pivotal_button_primary--large
 
 .tile
-  @include pivotal_tile
+  +pivotal_tile
   min-height: 250px
 
 .featured-tile-blue
-  @include pivotal_tile_blue
+  +pivotal_tile_blue
 
 .featured-tile-yellow
-  @include pivotal_tile_yellow
+  +pivotal_tile_yellow
 
 .featured-tile-red
-  @include pivotal_tile_red
+  +pivotal_tile_red
 
 .featured-header
-  @include pivotal_sub_header
+  +pivotal_sub_header
 
 .rule
-  @include pivotal_rule_dotted
+  +pivotal_rule_dotted
 
 .tile--bordered
   +pivotal_tile--bordered

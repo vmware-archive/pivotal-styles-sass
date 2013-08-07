@@ -1,6 +1,9 @@
 @mixin pivotal_tables
     table
         width: 100%
+        margin-bottom: 1em
+        &:last-child
+            margin-bottom: 0
     th, td
         padding: $base-spacing-unit
         text-align: left
@@ -19,7 +22,7 @@
 
     tbody tr th:last-of-type
         border-right-width: 2px
-                
+
 [colspan]
     text-align: center
 [colspan="1"]
