@@ -23,6 +23,7 @@
 @import "ui/layout"
 @import "ui/typography"
 @import "ui/site-nav"
+@import "ui/patterns"
 
 body
   background-color: #EDEDED
@@ -47,6 +48,7 @@ body
   background-size: cover
   height: 450px
   color: white
+  overflow: hidden
 
 a
   +pivotal_anchor
@@ -100,3 +102,15 @@ a
   background-color: #F9F9F9
   border-top: 1px solid #dddddd
   border-bottom: 1px solid #dddddd
+
+.lede
+  +pivotal_text-lede
+
+.code
+  +pivotal_code
+
+.secondary
+  +pivotal_text-secondary
+
+.tertiary
+  +pivotal_text-tertiary

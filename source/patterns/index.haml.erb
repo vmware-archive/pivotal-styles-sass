@@ -1,5 +1,6 @@
 ---
 title: Patterns
+layout: patterns
 ---
 
 %section
@@ -7,3 +8,12 @@ title: Patterns
     %header.pageHeader
       %h1 Pivotal Patterns
       %h2 Common Snippets of Markup
+    %section.container
+      .quarter.pattern-section-title
+        %h2 Typography
+      %section.pattern.three-quarters.omega
+        = partial "_patterns/lede"
+      %section.pattern.three-quarters.omega
+        = partial "_patterns/secondary"
+      %section.pattern.three-quarters.omega
+        = partial "_patterns/tertiary"
