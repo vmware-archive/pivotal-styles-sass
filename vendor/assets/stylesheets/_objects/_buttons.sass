@@ -5,11 +5,24 @@
   &:visited
     color: white
   &:hover
-    background-color: darken($pivotal_blue,10%)
+    background-color: darken($pivotal_blue, 10%)
     +box-shadow(0 2px 0 0 darken($pivotal_blue, 20%))
   &:active
-    background-color: darken($pivotal_blue,15%)
-    +box-shadow(0 2px 0 0 darken($pivotal_blue, 20%), 0 1px 2px rgba(0,0,0,.45) inset)
+    background-color: darken($pivotal_blue, 15%)
+    +box-shadow(0 2px 0 0 darken($pivotal_blue, 20%), 0 1px 2px rgba(0,0,0,0.45) inset)
+
+@mixin pivotal_button_reverse
+  color: $pivotal_blue
+  background-color: $pivotal_light_grey
+  +box-shadow(0 2px 0 0 darken($pivotal_light_grey, 10%))
+  &:visited
+    color: $pivotal_blue
+  &:hover
+    background-color: darken($pivotal_light_gray, 10%)
+    +box-shadow(0 2px 0 0 darken($pivotal_light_gray, 20%))
+  &:active
+    background-color: darken($pivotal_light_gray, 15%)
+    +box-shadow(0 2px 0 0 darken($pivotal_light_gray, 20%), 0 1px 2px rgba(0,0,0,0.45) inset)
 
 @mixin pivotal_button_danger
   +pivotal_button
@@ -18,10 +31,10 @@
   &:visited
     color: white
   &:hover
-    background-color: darken($pivotal_red,10%)
+    background-color: darken($pivotal_red, 10%)
     +box-shadow(0 2px 0 0 darken($pivotal_red, 20%))
   &:active
-    background-color: darken($pivotal_red,15%)
+    background-color: darken($pivotal_red, 15%)
     +box-shadow(0 2px 0 0 darken($pivotal_red, 20%), 0 1px 2px rgba(0,0,0,.45) inset)
 
 @mixin pivotal_button
