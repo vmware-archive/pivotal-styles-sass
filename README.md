@@ -37,6 +37,36 @@ There is an example app in this repo used to help build out the mixins. Follow t
 	
 Then visit `localhost:4567` to see an example of usage.
 
+## Incomplete list of useful variables
+
+- $pivotal_red
+- $pivotal_blue
+- $pivotal_yellow
+- $pivotal_light_grey
+- $pivotal_grey
+- $pivotal_dark_grey
+- $pivotal_font_family
+- $pivotal_font_family_mono
+
+## Incomplete list of useful mixins
+
+- pivotal_tile
+- pivotal_tile--bordered
+- pivotal_tile_blue
+- pivotal_tile_yellow
+- pivotal_tile_red
+
+- font-smoothing
+- pivotal_typography
+- pivotal_text
+- pivotal_heading
+- pivotal_h1
+- pivotal_h2
+- pivotal_h3
+- pivotal_anchor
+- pivotal_headers
+- pivotal_sub_header
+
 ## Contributing
 
 1. Fork it
