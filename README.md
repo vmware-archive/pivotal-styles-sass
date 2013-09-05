@@ -25,7 +25,7 @@ Or install it yourself as:
     @import pivotal
 
     button {
-      @include pivotal_primary_button
+      @include pivotal_button_primary
     }
 
 ### Examples
@@ -66,6 +66,8 @@ Then visit `localhost:4567` to see an example of usage.
 - pivotal_anchor
 - pivotal_headers
 - pivotal_sub_header
+
+- pivotal_button_primary
 
 ## Contributing
 
