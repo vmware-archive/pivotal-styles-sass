@@ -20,13 +20,15 @@ Or install it yourself as:
 
 ### Rails 3.2+
 
-`application.css`
+`my_style.css.scss`
 
-    @import pivotal
+````scss
+@import "pivotal";
 
-    button {
-      @include pivotal_button_primary
-    }
+button {
+  @include pivotal_button_primary;
+}
+````
 
 ### Examples
 
