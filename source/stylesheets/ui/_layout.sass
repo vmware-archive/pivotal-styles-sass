@@ -11,7 +11,7 @@ $break          : 12
 
 .container
   @include container($total-columns, $break)
-  +single-transition(all, 100ms, linear)
+  transition: all, 100ms, linear
 
 .quarter
   +span-columns(8,8)
@@ -28,4 +28,3 @@ $break          : 12
 
 .omega
   @include omega
-
