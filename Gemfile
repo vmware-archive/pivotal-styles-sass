@@ -2,7 +2,13 @@ source 'http://rubygems.org'
 
 gem "middleman", "~>3.1.4"
 gem 'middleman-sprockets'
-gem "susy"
+
+gem 'compass'
+
+gem 'sass'
+gem 'bourbon'
+gem 'neat'
+
 gem 'whitespace'
 gem 'middleman-autoprefixer'
 

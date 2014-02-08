@@ -7,7 +7,6 @@
 #   config.output_style = :compact
 # end
 #
-require "susy"
 
 activate :autoprefixer, browsers: ['last 2 versions', 'ie 8', 'ie 9']
 
