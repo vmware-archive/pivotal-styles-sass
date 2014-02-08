@@ -7,7 +7,6 @@
 #   config.output_style = :compact
 # end
 #
-require "susy"
 
 ###
 # Page options, layouts, aliases and proxies
