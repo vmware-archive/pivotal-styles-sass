@@ -9,9 +9,14 @@ $max-width     : 61.625em
 
 @import neat
 
+$breakpoint: new-breakpoint(max-width $max-width)
+$breakpoint-width  : 41.125em
+
 .container
-  +outer-container
   transition: all, 100ms, linear
+  +outer-container
+  +media($breakpoint)
+    max-width: $breakpoint-width
 
 .quarter
   +span-columns(2)
@@ -21,6 +26,12 @@ $max-width     : 61.625em
 
 .half
   +span-columns(4)
+
+.quarter,
+.three-quarters,
+.half
+  +media($breakpoint)
+    +span-columns(8)
 
 .omega
   +omega
