@@ -44,6 +44,21 @@
   &:active
     color: darken($pivotal_blue,15%)
 
+@mixin pivotal_navigation_anchor
+  color: $pivotal_dark_grey
+
+  font-size: 11px
+  letter-spacing: 1px
+  font-weight: 600
+
+  text-decoration: none
+  &:visited
+    color: $pivotal_dark_grey
+  &:hover
+    color: darken($pivotal_dark_grey,10%)
+  &:active
+    color: darken($pivotal_dark_grey,15%)
+
 @mixin pivotal_headers
   h1
     @include pivotal_h1
